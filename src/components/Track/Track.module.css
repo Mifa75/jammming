@@ -1,0 +1,19 @@
+.Track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .TrackInformation h3, .TrackInformation p {
+    margin: 0;
+  }
+  
+  .TrackAction {
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
