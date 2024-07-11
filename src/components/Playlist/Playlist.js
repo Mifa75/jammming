@@ -9,18 +9,15 @@ function Playlist({ playlistName, playlistTracks, onRemove, onNameChange, onSave
 
   return (
     <div className={styles.Playlist}>
-      <input
-        value={playlistName}
-        onChange={handleNameChange}
-        className={styles.PlaylistName}
-      />
-      <Tracklist tracks={playlistTracks} onRemove={onRemove} />
-      <button className={styles.SaveButton} onClick={onSave}>SAVE TO SPOTIFY</button>
+      <input value={playlistName} onChange={handleNameChange} />
+      <Tracklist tracks={playlistTracks} onRemove={onRemove} isRemoval={true} />
+      <button className={styles.PlaylistSave} onClick={onSave}>SAVE TO SPOTIFY</button>
     </div>
   );
 }
 
 export default Playlist;
+
 
 
 
