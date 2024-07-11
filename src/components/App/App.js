@@ -31,13 +31,39 @@ function App() {
     setPlaylistName(name);
   };
 
+  const savePlaylistToSpotify = () => {
+    const trackURIs = playlistTracks.map(track => track.uri);
+    console.log('Saving playlist:', playlistName, trackURIs);
+
+    // Mock saving to Spotify
+    mockSavePlaylistToSpotify(playlistName, trackURIs).then(() => {
+      // Reset playlist
+      setPlaylistName("New Playlist");
+      setPlaylistTracks([]);
+    });
+  };
+
+  // Mock function to simulate saving playlist to Spotify
+  const mockSavePlaylistToSpotify = (name, uris) => {
+    return new Promise((resolve) => {
+      console.log(`Mock saving playlist "${name}" to Spotify with URIs:`, uris);
+      setTimeout(resolve, 1000);
+    });
+  };
+
   return (
     <div className={styles.App}>
       <h1>Jammming</h1>
       <SearchBar />
       <div className={styles.AppPlaylist}>
         <SearchResults searchResults={searchResults} onAdd={addTrackToPlaylist} />
-        <Playlist playlistName={playlistName} playlistTracks={playlistTracks} onRemove={removeTrackFromPlaylist} onNameChange={updatePlaylistName} />
+        <Playlist 
+          playlistName={playlistName} 
+          playlistTracks={playlistTracks} 
+          onRemove={removeTrackFromPlaylist} 
+          onNameChange={updatePlaylistName} 
+          onSave={savePlaylistToSpotify} 
+        />
       </div>
     </div>
   );
