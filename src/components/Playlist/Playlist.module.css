@@ -1,19 +1,22 @@
 .Playlist {
-    margin: 20px;
-  }
-  
-  .Playlist input {
-    width: 300px;
-    height: 30px;
-    margin-right: 10px;
-  }
-  
-  .SaveButton {
-    height: 36px;
-    background-color: #1DB954;
-    color: white;
-    border: none;
-    padding: 5px 20px;
-    cursor: pointer;
-  }
-  
+  margin: 20px;
+}
+
+.PlaylistName {
+  width: 300px;
+  height: 30px;
+  margin-right: 10px;
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.SaveButton {
+  height: 36px;
+  background-color: #1DB954;
+  color: white;
+  border: none;
+  padding: 5px 20px;
+  cursor: pointer;
+}
