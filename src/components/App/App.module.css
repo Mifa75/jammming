@@ -1,9 +1,37 @@
 .App {
   text-align: center;
+  margin-top: 0;
+  background-image: url('../../util/images/music.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Adjust height as needed */
+  width: 100vw; /* Adjust width as needed */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  overflow: hidden; /* Hide overflow to avoid scrollbars */
 }
 
 .AppPlaylist {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+  height: 100%;
 }
+
+html, body, body > div, .app {
+  height: 100%;
+}
+
+h1 {
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  font-size: 3.5rem;
+  letter-spacing: 0.8rem;
+}
+
+span, #mcolor {
+  color: rgb(228, 25, 160);
+  font-size: 4rem;
+}
+

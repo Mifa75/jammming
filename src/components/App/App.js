@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <h1>Jammming</h1>
+      <h1>Ja<span id="mcolor"><em>mmm</em></span>ing</h1>
       <SearchBar onSearch={search} />
       <div className={styles.AppPlaylist}>
         <SearchResults searchResults={searchResults} onAdd={addTrackToPlaylist} />
