@@ -19,13 +19,7 @@
   border: none;
   padding: 5px 20px;
   cursor: pointer;
-}
-
-.PlaylistSave {
-  color: white;
-  background-color: #1DB954;
-  height: 1.8rem;
   border-top-left-radius: 0.6rem;
   border-bottom-right-radius: 0.6rem;
-  cursor: pointer;
 }
+

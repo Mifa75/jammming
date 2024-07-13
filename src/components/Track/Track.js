@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './Track.module.css';
 
-function Track({ track, onAdd, onRemove }) {
+function Track({ track, onAdd, onRemove, isRemoval }) {
   const addTrack = () => {
-    onAdd && onAdd(track);
+    onAdd(track);
   };
 
   const removeTrack = () => {
-    onRemove && onRemove(track);
+    onRemove(track);
   };
 
   return (
@@ -16,8 +16,15 @@ function Track({ track, onAdd, onRemove }) {
         <h3>{track.name}</h3>
         <p>{track.artist} | {track.album}</p>
       </div>
-      {onAdd && <button className={styles.TrackAction} onClick={addTrack}>+</button>}
-      {onRemove && <button className={styles.TrackAction} onClick={removeTrack}>-</button>}
+      {isRemoval ? (
+        <button className={styles.TrackAction} onClick={removeTrack}>
+          -
+        </button>
+      ) : (
+        <button className={styles.TrackAction} onClick={addTrack}>
+          +
+        </button>
+      )}
     </div>
   );
 }

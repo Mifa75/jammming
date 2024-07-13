@@ -11,7 +11,7 @@ function Playlist({ playlistName, playlistTracks, onRemove, onNameChange, onSave
     <div className={styles.Playlist}>
       <input value={playlistName} onChange={handleNameChange} />
       <Tracklist tracks={playlistTracks} onRemove={onRemove} isRemoval={true} />
-      <button className={styles.PlaylistSave} onClick={onSave}>SAVE TO SPOTIFY</button>
+      <button className={styles.SaveButton} onClick={onSave}>SAVE TO SPOTIFY</button>
     </div>
   );
 }
