@@ -1,14 +1,21 @@
 .App {
   text-align: center;
   margin-top: 0;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
+
+.Loading {
   background-image: url('../../util/images/music.jpg');
   background-size: cover;
+}
+
+.ImageLoaded {
   background-position: center;
-  height: 100vh; 
-  width: 100vw; 
-  margin: 0; 
-  padding: 0; 
-  overflow: hidden; 
 }
 
 .AppPlaylist {
@@ -34,4 +41,6 @@ span, #mcolor {
   color: rgb(228, 25, 160);
   font-size: 4rem;
 }
+
+
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../Playlist/Playlist';
@@ -9,6 +9,13 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [playlistName, setPlaylistName] = useState("New Playlist");
   const [playlistTracks, setPlaylistTracks] = useState([]);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  
+  useEffect(() => {
+    const img = new Image();
+    img.src = '../../util/images/music.jpg';
+    img.onload = () => setImageLoaded(true);
+  }, []);
 
   const addTrackToPlaylist = (track) => {
     if (!playlistTracks.some(savedTrack => savedTrack.id === track.id)) {
@@ -39,8 +46,10 @@ function App() {
     });
   };
 
+  
+
   return (
-    <div className={styles.App}>
+    <div className={`${styles.App} ${imageLoaded ? styles.ImageLoaded : styles.Loading}`}>
       <h1>Ja<span id="mcolor"><em>mmm</em></span>ing</h1>
       <SearchBar onSearch={search} />
       <div className={styles.AppPlaylist}>
